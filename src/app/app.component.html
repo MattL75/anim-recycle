@@ -1,2 +1,5 @@
-<button (click)="toggler = !toggler">HELLO WORLD</button>
-<div class="example" [@fadder] *ngIf="toggler">FadeIf Example</div>
+<div>
+    <button mat-raised-button (click)="toggler = !toggler">Toggle</button>
+    <span>Currently: {{toggler ? 'Visible' : 'Hidden'}}</span>
+    <mat-card [@fadder] *ngIf="toggler">FadeIf Example</mat-card>
+</div>
