@@ -2,7 +2,6 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AppComponent} from './app.component';
-import {MatButtonModule, MatCardModule} from '@angular/material';
 
 
 @NgModule({
@@ -12,8 +11,6 @@ import {MatButtonModule, MatCardModule} from '@angular/material';
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
-        MatCardModule,
-        MatButtonModule
     ],
     providers: [],
     bootstrap: [AppComponent]

@@ -1,5 +1,106 @@
-<div>
-    <button mat-raised-button (click)="toggler = !toggler">Toggle</button>
-    <span>Currently: {{toggler ? 'Visible' : 'Hidden'}}</span>
-    <mat-card [@fadder] *ngIf="toggler">FadeIf Example</mat-card>
+<h2>ngIf Animations</h2>
+<!-- TODO style headers and make all HTML dynamically TypeScript loaded -->
+<div class="example-container">
+    <div class="example-overlay">
+        <span>
+            <button class="example-button" (click)="fadeIf = !fadeIf">Toggle</button>
+            <span class="state">Currently: {{fadeIf ? 'visible' : 'absent'}}</span>
+        </span>
+        <div *ngIf="fadeIf" [@fadder] class="example-div">FadeIf</div>
+    </div>
+    <div class="example-overlay">
+        <span>
+            <button class="example-button" (click)="fadeRightIf = !fadeRightIf">Toggle</button>
+            <span class="state">Currently: {{fadeRightIf ? 'visible' : 'absent'}}</span>
+        </span>
+        <div *ngIf="fadeRightIf" [@fadeRight] class="example-div">FadeRightIf</div>
+    </div>
+    <div class="example-overlay">
+        <span>
+            <button class="example-button" (click)="fadeLeftIf = !fadeLeftIf">Toggle</button>
+            <span class="state">Currently: {{fadeLeftIf ? 'visible' : 'absent'}}</span>
+        </span>
+        <div *ngIf="fadeLeftIf" [@fadeLeft] class="example-div">FadeLeftIf</div>
+    </div>
+    <div class="example-overlay">
+        <span>
+            <button class="example-button" (click)="fadeTopIf = !fadeTopIf">Toggle</button>
+            <span class="state">Currently: {{fadeTopIf ? 'visible' : 'absent'}}</span>
+        </span>
+        <div *ngIf="fadeTopIf" [@fadeTop] class="example-div">FadeTopIf</div>
+    </div>
+    <div class="example-overlay">
+        <span>
+            <button class="example-button" (click)="fadeBottomIf = !fadeBottomIf">Toggle</button>
+            <span class="state">Currently: {{fadeBottomIf ? 'visible' : 'absent'}}</span>
+        </span>
+        <div *ngIf="fadeBottomIf" [@fadeBottom] class="example-div">FadeBottomIf</div>
+    </div>
+    <div class="example-overlay">
+        <span>
+            <button class="example-button" (click)="fadeLeftRightIf = !fadeLeftRightIf">Toggle</button>
+            <span class="state">Currently: {{fadeLeftRightIf ? 'visible' : 'absent'}}</span>
+        </span>
+        <div *ngIf="fadeLeftRightIf" [@fadeLeftRightIf] class="example-div">FadeLeftRightIf</div>
+    </div>
+    <div class="example-overlay">
+        <span>
+            <button class="example-button" (click)="fadeRightLeftIf = !fadeRightLeftIf">Toggle</button>
+            <span class="state">Currently: {{fadeRightLeftIf ? 'visible' : 'absent'}}</span>
+        </span>
+        <div *ngIf="fadeRightLeftIf" [@fadeRightLeftIf] class="example-div">fadeRightLeftIf</div>
+    </div>
+    <div class="example-overlay">
+        <span>
+            <button class="example-button" (click)="fadeRotateIf = !fadeRotateIf">Toggle</button>
+            <span class="state">Currently: {{fadeRotateIf ? 'visible' : 'absent'}}</span>
+        </span>
+        <div *ngIf="fadeRotateIf" [@fadeRotateIf] class="example-div">FadeRotateIf</div>
+    </div>
+    <div class="example-overlay">
+        <span>
+            <button class="example-button" (click)="rotateToggler = !rotateToggler">Toggle</button>
+            <span class="state">Currently: {{rotateToggler ? 'visible' : 'absent'}}</span>
+        </span>
+        <div *ngIf="rotateToggler" [@rotateIf] class="example-div">RotateIf</div>
+    </div>
+    <div class="example-overlay">
+        <span>
+            <button class="example-button" (click)="rotateDownScaleIf = !rotateDownScaleIf">Toggle</button>
+            <span class="state">Currently: {{rotateDownScaleIf ? 'visible' : 'absent'}}</span>
+        </span>
+        <div *ngIf="rotateDownScaleIf" [@rotateDownScaleIf] class="example-div">RotateDownScaleIf</div>
+    </div>
+    <div class="example-overlay">
+        <span>
+            <button class="example-button" (click)="rotateDownScaleFadeIf = !rotateDownScaleFadeIf">Toggle</button>
+            <span class="state">Currently: {{rotateDownScaleFadeIf ? 'visible' : 'absent'}}</span>
+        </span>
+        <div *ngIf="rotateDownScaleFadeIf" [@rotateDownScaleFadeIf] class="example-div">RotateDownScaleFadeIf</div>
+    </div>
+    <div class="example-overlay">
+        <span>
+            <button class="example-button" (click)="scaleIf = !scaleIf">Toggle</button>
+            <span class="state">Currently: {{scaleIf ? 'visible' : 'absent'}}</span>
+        </span>
+        <div *ngIf="scaleIf" [@scaleIf] class="example-div">ScaleIf</div>
+    </div>
+</div>
+
+<h2>Generic Animations</h2>
+<div class="example-container">
+    <div class="example-overlay">
+        <span>
+            <button class="example-button" (click)="rotate = !rotate">Rotate</button>
+            <span class="state">State: {{rotate}}</span>
+        </span>
+        <div [@rotate]="rotate" class="example-div">Rotate</div>
+    </div>
+    <div class="example-overlay">
+        <span>
+            <button class="example-button" (click)="scale = !scale">Scale</button>
+            <span class="state">State: {{scale}}</span>
+        </span>
+        <div [@scale]="scale" class="example-div">Scale</div>
+    </div>
 </div>

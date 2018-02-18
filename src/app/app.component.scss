@@ -1,4 +1,41 @@
-button {
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.example-button {
     background-color: cornflowerblue;
     color: white;
+    border-radius: 2px;
+    padding: 5px 20px;
+    border: none;
+}
+
+.example-overlay {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: flex-start;
+    flex-basis: 18%;
+    min-width: 208px;
+    margin: 10px;
+}
+
+.example-div {
+    border: black 1px solid;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    padding: 15px 0;
+    margin: 10px;
+}
+
+.example-container {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 10%;
+}
+
+.state {
+    padding-left: 10px;
 }
