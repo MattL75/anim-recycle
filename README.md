@@ -4,7 +4,7 @@ A compilation of animations that I use in various personal projects. This is mea
 
 # Features
 
-My animations are split into categories. For the moment, I have fade, rotate, scale and variety. The latter is for animations that combine multiple categories for a better effect.
+My animations are split into categories. For the moment, I've included fade, size, rotate, scale and variety. The latter is for animations that combine multiple categories for a better effect. Animations with the suffic 'If' are applied on enter/leave (i.e. using an *ngIf) and don't need a flag control.
 
 # Usage
 
