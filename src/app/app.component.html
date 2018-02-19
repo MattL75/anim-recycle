@@ -1,5 +1,5 @@
-<h2>ngIf Animations</h2>
-<!-- TODO style headers and make all HTML dynamically TypeScript loaded -->
+<h2 class="title">ngIf Animations</h2>
+<!-- TODO style headers -->
 <div class="example-container">
     <div class="example-overlay">
         <span>
@@ -52,6 +52,27 @@
     </div>
     <div class="example-overlay">
         <span>
+            <button class="example-button" (click)="flyInOut = !flyInOut">Toggle</button>
+            <span class="state">Currently: {{flyInOut ? 'visible' : 'absent'}}</span>
+        </span>
+        <div *ngIf="flyInOut" [@flyInOut] class="example-div">FlyInOut</div>
+    </div>
+    <div class="example-overlay">
+        <span>
+            <button class="example-button" (click)="flyAwayRight = !flyAwayRight">Toggle</button>
+            <span class="state">Currently: {{flyAwayRight ? 'visible' : 'absent'}}</span>
+        </span>
+        <div *ngIf="flyAwayRight" [@flyAwayRight] class="example-div">FlyAwayRight</div>
+    </div>
+    <div class="example-overlay">
+        <span>
+            <button class="example-button" (click)="flyAwayLeft = !flyAwayLeft">Toggle</button>
+            <span class="state">Currently: {{flyAwayLeft ? 'visible' : 'absent'}}</span>
+        </span>
+        <div *ngIf="flyAwayLeft" [@flyAwayLeft] class="example-div">FlyAwayLeft</div>
+    </div>
+    <div class="example-overlay">
+        <span>
             <button class="example-button" (click)="fadeRotateIf = !fadeRotateIf">Toggle</button>
             <span class="state">Currently: {{fadeRotateIf ? 'visible' : 'absent'}}</span>
         </span>
@@ -85,9 +106,58 @@
         </span>
         <div *ngIf="scaleIf" [@scaleIf] class="example-div">ScaleIf</div>
     </div>
+    <div class="example-overlay">
+        <span>
+            <button class="example-button" (click)="scaleUpDownIf = !scaleUpDownIf">Toggle</button>
+            <span class="state">Currently: {{scaleUpDownIf ? 'visible' : 'absent'}}</span>
+        </span>
+        <div *ngIf="scaleUpDownIf" [@scaleUpDownIf] class="example-div">ScaleUpDownIf</div>
+    </div>
+    <div class="example-overlay">
+        <span>
+            <button class="example-button" (click)="collapseX = !collapseX">Toggle</button>
+            <span class="state">Currently: {{collapseX ? 'visible' : 'absent'}}</span>
+        </span>
+        <div *ngIf="collapseX" [@collapseX] class="example-div">CollapseX</div>
+    </div>
+    <div class="example-overlay">
+        <span>
+            <button class="example-button" (click)="collapseXPadding = !collapseXPadding">Toggle</button>
+            <span class="state">Currently: {{collapseXPadding ? 'visible' : 'absent'}}</span>
+        </span>
+        <div *ngIf="collapseXPadding" [@collapseXPadding] class="example-div">CollapseXPadding</div>
+    </div>
+    <div class="example-overlay">
+        <span>
+            <button class="example-button" (click)="collapseY = !collapseY">Toggle</button>
+            <span class="state">Currently: {{collapseY ? 'visible' : 'absent'}}</span>
+        </span>
+        <div *ngIf="collapseY" [@collapseY] class="example-div">CollapseY</div>
+    </div>
+    <div class="example-overlay">
+        <span>
+            <button class="example-button" (click)="collapseYPadding = !collapseYPadding">Toggle</button>
+            <span class="state">Currently: {{collapseYPadding ? 'visible' : 'absent'}}</span>
+        </span>
+        <div *ngIf="collapseYPadding" [@collapseYPadding] class="example-div">CollapseYPadding</div>
+    </div>
+    <div class="example-overlay">
+        <span>
+            <button class="example-button" (click)="flashIf = !flashIf">Toggle</button>
+            <span class="state">Currently: {{flashIf ? 'visible' : 'absent'}}</span>
+        </span>
+        <div *ngIf="flashIf" [@flashIf] class="example-div">FlashIf</div>
+    </div>
+    <div class="example-overlay">
+        <span>
+            <button class="example-button" (click)="squareIf = !squareIf">Toggle</button>
+            <span class="state">Currently: {{squareIf ? 'visible' : 'absent'}}</span>
+        </span>
+        <div *ngIf="squareIf" [@squareIf] class="example-div">SquareIf</div>
+    </div>
 </div>
 
-<h2>Generic Animations</h2>
+<h2 class="title">Generic Animations</h2>
 <div class="example-container">
     <div class="example-overlay">
         <span>
@@ -102,5 +172,47 @@
             <span class="state">State: {{scale}}</span>
         </span>
         <div [@scale]="scale" class="example-div">Scale</div>
+    </div>
+    <div class="example-overlay">
+        <span>
+            <button class="example-button" (click)="width = !width">Width</button>
+            <span class="state">State: {{width}}</span>
+        </span>
+        <div [@width]="width" class="example-div">Width</div>
+    </div>
+    <div class="example-overlay">
+        <span>
+            <button class="example-button" (click)="height = !height">Height</button>
+            <span class="state">State: {{height}}</span>
+        </span>
+        <div [@height]="height" class="example-div">Height</div>
+    </div>
+    <div class="example-overlay">
+        <span>
+            <button class="example-button" (click)="shakeY = !shakeY">ShakeY</button>
+            <span class="state">State: {{shakeY}}</span>
+        </span>
+        <div [@shakeY]="shakeY" class="example-div">ShakeY</div>
+    </div>
+    <div class="example-overlay">
+        <span>
+            <button class="example-button" (click)="shakeX = !shakeX">ShakeX</button>
+            <span class="state">State: {{shakeX}}</span>
+        </span>
+        <div [@shakeX]="shakeX" class="example-div">ShakeX</div>
+    </div>
+    <div class="example-overlay">
+        <span>
+            <button class="example-button" (click)="flash = !flash">Flash</button>
+            <span class="state">State: {{flash}}</span>
+        </span>
+        <div [@flash]="flash" class="example-div">Flash</div>
+    </div>
+    <div class="example-overlay">
+        <span>
+            <button class="example-button" (click)="heartbeat = !heartbeat">Heartbeat</button>
+            <span class="state">State: {{heartbeat}}</span>
+        </span>
+        <div [@heartbeat]="heartbeat" class="example-div">Heartbeat</div>
     </div>
 </div>

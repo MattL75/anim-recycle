@@ -1,7 +1,7 @@
 import {Options} from '../common/interfaces';
 import {
     animate,
-    animateChild, AnimationTriggerMetadata, group, query, state, style, transition,
+    animateChild, AnimationTriggerMetadata, group, keyframes, query, state, style, transition,
     trigger
 } from '@angular/animations';
 
@@ -49,3 +49,40 @@ export function scaleIf(options: ScaleOptions = {}): AnimationTriggerMetadata {
         ]
     );
 }
+
+export function scaleUpDownIf(options: ScaleOptions = {}): AnimationTriggerMetadata {
+    return trigger(
+        (options.trigger) || 'scaleUpDownIf',
+        [
+            transition(
+                ':enter', [
+                    style({transform: 'scale3d(0, 0, 0)'}),
+                    group([
+                        query('@*', animateChild(), {optional: true}),
+                        animate(((options.time) || 500) + 'ms ' +
+                            ((options.stagger) || 0) + 'ms ' + 'ease-in-out', keyframes([
+                            style({transform: 'scale3d(0, 0, 0)', offset: 0}),
+                            style({transform: 'scale3d(1.1, 1.1, 1.1)', offset: 0.8}),
+                            style({transform: 'scale3d(1, 1, 1)', offset: 1}),
+                        ])),
+                    ]),
+                ]
+            ),
+            transition(
+                ':leave', [
+                    style({opacity: 1}),
+                    group([
+                        query('@*', animateChild(), {optional: true}),
+                        animate(((options.time) || 500) + 'ms ' +
+                            ((options.stagger) || 0) + 'ms ' + 'ease-in', keyframes([
+                            style({transform: 'scale3d(1, 1, 1)', offset: 0}),
+                            style({transform: 'scale3d(1.1, 1.1, 1.1)', offset: 0.2}),
+                            style({transform: 'scale3d(0, 0, 0)', offset: 1}),
+                        ])),
+                    ]),
+                ]
+            )
+        ]
+    );
+}
+

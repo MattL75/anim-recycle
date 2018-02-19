@@ -27,6 +27,7 @@
     text-align: center;
     padding: 15px 0;
     margin: 10px;
+    word-break: keep-all;
 }
 
 .example-container {
@@ -38,4 +39,8 @@
 
 .state {
     padding-left: 10px;
+}
+
+.title {
+    text-align: center;
 }
