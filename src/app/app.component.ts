@@ -4,12 +4,13 @@ import {
     fadeTopIf
 } from '../animations/fade/fade';
 import {rotate, rotateDownScaleIf, rotateIf} from '../animations/rotate/rotate';
-import {fadeRotateIf, heartbeat, rotateDownScaleFadeIf, squareIf} from '../animations/variety/variety';
+import {borderGrow, fadeRotateIf, heartbeat, rotateDownScaleFadeIf, squareIf} from '../animations/variety/variety';
 import {scale, scaleIf, scaleUpDownIf} from '../animations/scale/scale';
 import {collapseX, collapseXPadding, collapseY, collapseYPadding, height, width} from '../animations/size/size';
 import {shakeX, shakeY} from '../animations/variety/shake';
 import {flash, flashIf} from '../animations/variety/flash';
 import {flyAwayLeft, flyAwayRight, flyInOut} from '../animations/variety/flying';
+import {lightSkew, skew, weirdSkew} from '../animations/variety/skew';
 
 @Component({
     selector: 'app-root',
@@ -50,6 +51,10 @@ import {flyAwayLeft, flyAwayRight, flyInOut} from '../animations/variety/flying'
         flashIf(),
         heartbeat(),
         squareIf(),
+        borderGrow(),
+        skew(),
+        lightSkew(),
+        weirdSkew(),
     ]
 })
 export class AppComponent {
@@ -87,5 +92,9 @@ export class AppComponent {
     flashIf = true;
     heartbeat = true;
     squareIf = true;
+    borderGrow = true;
+    skew = true;
+    lightSkew = true;
+    weirdSkew = true;
 
 }

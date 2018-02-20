@@ -214,4 +214,32 @@
         </span>
         <div [@heartbeat]="heartbeat" class="example-div">Heartbeat</div>
     </div>
+    <div class="example-overlay">
+        <span>
+            <button class="example-button" (click)="borderGrow = !borderGrow">BorderGrow</button>
+            <span class="state">State: {{borderGrow}}</span>
+        </span>
+        <div [@borderGrow]="borderGrow" class="example-div">BorderGrow</div>
+    </div>
+    <div class="example-overlay">
+        <span>
+            <button class="example-button" (click)="skew = !skew">Skew</button>
+            <span class="state">State: {{skew}}</span>
+        </span>
+        <div [@skew]="skew" class="example-div">Skew</div>
+    </div>
+    <div class="example-overlay">
+        <span>
+            <button class="example-button" (click)="lightSkew = !lightSkew">LightSkew</button>
+            <span class="state">State: {{lightSkew}}</span>
+        </span>
+        <div [@lightSkew]="lightSkew" class="example-div">LightSkew</div>
+    </div>
+    <div class="example-overlay">
+        <span>
+            <button class="example-button" (click)="weirdSkew = !weirdSkew">WeirdSkew</button>
+            <span class="state">State: {{weirdSkew}}</span>
+        </span>
+        <div [@weirdSkew]="weirdSkew" class="example-div">WeirdSkew</div>
+    </div>
 </div>
