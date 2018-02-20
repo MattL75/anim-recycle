@@ -73,6 +73,24 @@ export function heartbeat(options: Options = {}): AnimationTriggerMetadata {
     ]);
 }
 
+export function borderGrow(options: Options = {}): AnimationTriggerMetadata {
+    return trigger((options.trigger) || 'borderGrow', [
+        state('0', style({
+            'border-width': '3px'
+        })),
+        state('1', style({
+            'border-width': '1px'
+        })),
+        transition('0 <=> 1', [
+            group([
+                query('@*', animateChild(), {optional: true}),
+                animate(((options.time) || 300) + 'ms ' +
+                    ((options.stagger) || 0) + 'ms ' + 'ease'),
+            ]),
+        ]),
+    ]);
+}
+
 export function squareIf(options: Options = {}): AnimationTriggerMetadata {
     return trigger(
         (options.trigger) || 'squareIf',
